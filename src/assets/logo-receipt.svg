@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="100%" height="100%">
+  <!-- Transparent / White Background for Thermal Paper -->
+  <rect width="600" height="700" fill="#FFFFFF" />
+
+  <!-- Main Ornate Crest Group in High-Contrast Black -->
+  <g transform="translate(300, 260)" id="crest" fill="#000000" stroke="#000000">
+    
+    <!-- Outer Decorative Medallion Rings -->
+    <circle r="195" fill="none" stroke="#000000" stroke-width="6" />
+    <circle r="185" fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="5,3" />
+    <circle r="180" fill="none" stroke="#000000" stroke-width="4" />
+
+    <!-- Top Fleur-de-lis Crest (12 o'clock) -->
+    <g transform="translate(0, -195)">
+      <path d="M 0 -42 C -7 -25 -14 -12 0 0 C 14 -12 7 -25 0 -42 Z" stroke-width="1.5" />
+      <path d="M -5 -5 C -18 -8 -30 -22 -22 -32 C -15 -38 -5 -25 -2 -14 Z" stroke-width="1.5" />
+      <path d="M 5 -5 C 18 -8 30 -22 22 -32 C 15 -38 5 -25 2 -14 Z" stroke-width="1.5" />
+      <path d="M -15 2 Q 0 -2 15 2 Q 0 6 -15 2 Z" />
+      <circle cx="0" cy="-44" r="3.5" />
+    </g>
+
+    <!-- Bottom Finial & Leaf Scroll (6 o'clock) -->
+    <g transform="translate(0, 195)">
+      <path d="M 0 38 C -6 22 -12 10 0 0 C 12 10 6 22 0 38 Z" stroke-width="1.5" />
+      <path d="M -4 4 C -16 6 -26 18 -18 28 C -12 32 -4 20 -1 10 Z" stroke-width="1.5" />
+      <path d="M 4 4 C 16 6 26 18 18 28 C 12 32 4 20 1 10 Z" stroke-width="1.5" />
+      <circle cx="0" cy="40" r="3.5" />
+    </g>
+
+    <!-- Left Flank Flourishes (9 o'clock) -->
+    <g transform="translate(-195, 0)">
+      <path d="M 0 0 C -15 -10 -28 -6 -35 0 C -28 6 -15 10 0 0 Z" stroke-width="1" />
+      <path d="M -5 -8 C -18 -20 -30 -16 -24 -6 C -18 0 -8 -4 -5 -8 Z" />
+      <path d="M -5 8 C -18 20 -30 16 -24 6 C -18 0 -8 4 -5 8 Z" />
+    </g>
+
+    <!-- Right Flank Flourishes (3 o'clock) -->
+    <g transform="translate(195, 0)">
+      <path d="M 0 0 C 15 -10 28 -6 35 0 C 28 6 15 10 0 0 Z" stroke-width="1" />
+      <path d="M 5 -8 C 18 -20 30 -16 24 -6 C 18 0 8 -4 5 -8 Z" />
+      <path d="M 5 8 C 18 20 30 16 24 6 C 18 0 8 4 5 8 Z" />
+    </g>
+
+    <!-- Ornate Arabesque Corner Scrolls around Circle -->
+    <g fill="none" stroke="#000000" stroke-width="4" stroke-linecap="round">
+      <path d="M -135 -135 C -165 -165 -195 -145 -185 -115 C -175 -85 -145 -95 -138 -120" />
+      <path d="M 135 -135 C 165 -165 195 -145 185 -115 C 175 -85 145 -95 138 -120" />
+      <path d="M -135 135 C -165 165 -195 145 -185 115 C -175 85 -145 95 -138 120" />
+      <path d="M 135 135 C 165 165 195 145 185 115 C 175 85 145 95 138 120" />
+    </g>
+
+    <!-- Intertwined Monogram "P" and "C" in Solid Black -->
+    <!-- Letter P -->
+    <g id="letterP">
+      <path d="M -75 -135 L -35 -135 L -35 -122 L -48 -122 L -48 65 L -35 65 L -35 78 L -75 78 L -75 65 L -62 65 L -62 -122 L -75 -122 Z" />
+      <path d="M -48 -135 C 10 -135 48 -120 48 -60 C 48 0 8 15 -48 15 L -48 -5 C 2 -5 32 -15 32 -60 C 32 -105 2 -115 -48 -115 Z" />
+      <!-- Cutout inside loop -->
+      <path d="M -48 -112 C -8 -112 18 -100 18 -60 C 18 -20 -8 -8 -48 -8 Z" fill="#FFFFFF" stroke="#000000" stroke-width="2" />
+    </g>
+
+    <!-- Letter C -->
+    <g id="letterC">
+      <path d="M 105 -70 C 95 -115 55 -140 -15 -140 C -70 -140 -115 -100 -115 -35 C -115 -5 -90 20 -70 20 C -55 20 -45 10 -45 -5 C -45 -18 -55 -25 -65 -25 C -75 -25 -85 -15 -85 -30 C -85 -75 -50 -115 -10 -115 C 35 -115 65 -95 75 -65 Z" />
+      <path d="M -25 -15 C 40 -15 105 5 110 80 C 112 105 95 125 65 125 C 45 125 35 110 35 95 C 35 80 48 72 58 72 C 68 72 75 78 78 88 C 76 60 25 38 -20 38 C -40 38 -55 45 -62 55 L -68 35 C -55 20 -35 12 -25 12 Z" />
+    </g>
+
+    <!-- Centered Vintage Dinner Fork (Base of Medallion) -->
+    <g transform="translate(0, 75)" id="dinnerFork">
+      <path d="M -9 -45 L -9 -15 Q -9 0 0 5 Q 9 0 9 -15 L 9 -45 L 6.5 -45 L 6.5 -16 Q 6.5 -2 3.5 0 L 3.5 -45 L 1.5 -45 L 1.5 -1 L -1.5 -1 L -1.5 -45 L -3.5 -45 L -3.5 0 Q -6.5 -2 -6.5 -16 L -6.5 -45 Z" />
+      <path d="M -3.5 5 Q -1.5 25 -2 55 L 2 55 Q 1.5 25 3.5 5 Z" />
+      <path d="M -2 55 C -6 68 -7 82 0 95 C 7 82 6 68 2 55 Z" />
+      <circle cx="0" cy="95" r="3" />
+      <path d="M -12 25 C -28 15 -42 28 -32 42 C -24 35 -18 30 -12 28 Z" />
+      <path d="M 12 25 C 28 15 42 28 32 42 C 24 35 18 30 12 28 Z" />
+    </g>
+  </g>
+
+  <!-- High-Contrast Black Typography -->
+  <text x="300" y="555" text-anchor="middle" font-family="'Cinzel', 'Trajan Pro', 'Playfair Display', 'Times New Roman', serif" font-size="44" font-weight="900" fill="#000000" letter-spacing="4">
+    PRIME CENTURY
+  </text>
+
+  <g transform="translate(300, 605)">
+    <line x1="-190" y1="-8" x2="-115" y2="-8" stroke="#000000" stroke-width="3" />
+    <text x="0" y="0" text-anchor="middle" font-family="'Cinzel', 'Trajan Pro', 'Playfair Display', 'Times New Roman', serif" font-size="19" font-weight="900" fill="#000000" letter-spacing="8">
+      RESTAURANT
+    </text>
+    <line x1="115" y1="-8" x2="190" y2="-8" stroke="#000000" stroke-width="3" />
+  </g>
+</svg>

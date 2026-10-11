@@ -1,0 +1,318 @@
+{
+  "version": "1.0",
+  "timestamp": "2026-10-09T18:11:23.411Z",
+  "createdBy": "admin",
+  "data": {
+    "bills": [
+      {
+        "id": "test-bill-1791569483168",
+        "billNumber": "INV-2026-TEST01",
+        "orderId": "ord-test-01",
+        "tableId": 3,
+        "items": [
+          {
+            "id": "item-1",
+            "menuItemId": "m-1",
+            "name": "Paneer Tikka",
+            "price": 260,
+            "quantity": 2,
+            "isVeg": true,
+            "kotSentQuantity": 2
+          },
+          {
+            "id": "item-2",
+            "menuItemId": "m-2",
+            "name": "Dal Makhani",
+            "price": 280,
+            "quantity": 1,
+            "isVeg": true,
+            "kotSentQuantity": 1
+          }
+        ],
+        "subtotal": 800,
+        "subtotalPaise": 80000,
+        "discountType": "percentage",
+        "discountValue": 10,
+        "discountAmount": 80,
+        "discountAmountPaise": 8000,
+        "cgstRate": 2.5,
+        "sgstRate": 2.5,
+        "cgstAmount": 18,
+        "cgstAmountPaise": 1800,
+        "sgstAmount": 18,
+        "sgstAmountPaise": 1800,
+        "grandTotal": 756,
+        "grandTotalPaise": 75600,
+        "paymentMethod": "cash",
+        "cashAmount": 756,
+        "bankAmount": 0,
+        "upiAmount": 0,
+        "cardAmount": 0,
+        "paymentStatus": "voided",
+        "paidAt": "2026-10-09T14:30:00.000Z",
+        "cashierName": "Amit Kumar",
+        "isPrinted": false,
+        "printCount": 0,
+        "isDeleted": false,
+        "isVoided": true,
+        "voidedAt": "2026-10-09T18:11:23.200Z",
+        "voidedBy": "PRIMECENTURY RESTAURANT & CAFE",
+        "voidReason": "Customer changed table before dining",
+        "idempotencyKey": "idemp-key-1791569483168"
+      },
+      {
+        "id": "test-bill-1791569441884",
+        "billNumber": "INV-2026-TEST01",
+        "orderId": "ord-test-01",
+        "tableId": 3,
+        "items": [
+          {
+            "id": "item-1",
+            "menuItemId": "m-1",
+            "name": "Paneer Tikka",
+            "price": 260,
+            "quantity": 2,
+            "isVeg": true,
+            "kotSentQuantity": 2
+          },
+          {
+            "id": "item-2",
+            "menuItemId": "m-2",
+            "name": "Dal Makhani",
+            "price": 280,
+            "quantity": 1,
+            "isVeg": true,
+            "kotSentQuantity": 1
+          }
+        ],
+        "subtotal": 800,
+        "subtotalPaise": 80000,
+        "discountType": "percentage",
+        "discountValue": 10,
+        "discountAmount": 80,
+        "discountAmountPaise": 8000,
+        "cgstRate": 2.5,
+        "sgstRate": 2.5,
+        "cgstAmount": 18,
+        "cgstAmountPaise": 1800,
+        "sgstAmount": 18,
+        "sgstAmountPaise": 1800,
+        "grandTotal": 756,
+        "grandTotalPaise": 75600,
+        "paymentMethod": "cash",
+        "cashAmount": 756,
+        "bankAmount": 0,
+        "upiAmount": 0,
+        "cardAmount": 0,
+        "paymentStatus": "voided",
+        "paidAt": "2026-10-09T14:30:00.000Z",
+        "cashierName": "Amit Kumar",
+        "isPrinted": false,
+        "printCount": 0,
+        "isDeleted": false,
+        "isVoided": true,
+        "voidedAt": "2026-10-09T18:10:41.903Z",
+        "voidedBy": "PRIMECENTURY RESTAURANT & CAFE",
+        "voidReason": "Customer changed table before dining",
+        "idempotencyKey": "idemp-key-1791569441884"
+      }
+    ],
+    "users": [
+      {
+        "id": "usr-admin",
+        "username": "admin",
+        "name": "PRIMECENTURY RESTAURANT & CAFE",
+        "passwordHash": "4475bf1634e724887b166b80a0a52103f49a1beb2975885844756513cb64db59",
+        "role": "owner",
+        "isActive": true,
+        "createdAt": "2026-10-07T00:00:00Z"
+      },
+      {
+        "id": "usr-2",
+        "username": "manager",
+        "name": "Pooja Verma",
+        "passwordHash": "c57b9c5fa6d814fe36b4e1fe372eebf37bf7ae402ea73a9ea15070d41a85022f",
+        "role": "manager",
+        "isActive": true,
+        "createdAt": "2026-10-07T00:00:00Z"
+      },
+      {
+        "id": "usr-3",
+        "username": "cashier",
+        "name": "Amit Kumar",
+        "passwordHash": "8dc6e7d174fc24cb7f744da65a4567a3de0803422b510b08235c5ad1f26fa98a",
+        "role": "cashier",
+        "isActive": true,
+        "createdAt": "2026-10-07T00:00:00Z"
+      },
+      {
+        "id": "usr-4",
+        "username": "waiter",
+        "name": "Rohan Gupta",
+        "passwordHash": "c3757dedc889c5644217a562e5b349b20c3bfbaf5bd3a8e3bb33ce61f5d0c02c",
+        "role": "waiter",
+        "isActive": true,
+        "createdAt": "2026-10-07T00:00:00Z"
+      },
+      {
+        "id": "usr-5",
+        "username": "kitchen",
+        "name": "Chef Sanjeev",
+        "passwordHash": "1e72005b66620eb1e22ecd5b2aea5e598cb14bc54416a8df9b6dc4d9ed4b221c",
+        "role": "kitchen",
+        "isActive": true,
+        "createdAt": "2026-10-07T00:00:00Z"
+      }
+    ],
+    "floors": [
+      {
+        "id": "floor-lower",
+        "name": "Lower Hall",
+        "displayOrder": 1
+      },
+      {
+        "id": "floor-upper",
+        "name": "Upper Hall",
+        "displayOrder": 2
+      }
+    ],
+    "tables": [
+      {
+        "id": 1,
+        "name": "Table 1",
+        "capacity": 2,
+        "section": "Lower Hall",
+        "status": "available"
+      },
+      {
+        "id": 2,
+        "name": "Table 2",
+        "capacity": 4,
+        "section": "Lower Hall",
+        "status": "available"
+      },
+      {
+        "id": 3,
+        "name": "Table 3",
+        "capacity": 4,
+        "section": "Lower Hall",
+        "status": "available"
+      },
+      {
+        "id": 4,
+        "name": "Table 4",
+        "capacity": 6,
+        "section": "Lower Hall",
+        "status": "available"
+      },
+      {
+        "id": 5,
+        "name": "Table 5",
+        "capacity": 2,
+        "section": "Lower Hall",
+        "status": "available"
+      },
+      {
+        "id": 6,
+        "name": "Table 6",
+        "capacity": 4,
+        "section": "Upper Hall",
+        "status": "available"
+      },
+      {
+        "id": 7,
+        "name": "Table 7",
+        "capacity": 4,
+        "section": "Upper Hall",
+        "status": "available"
+      },
+      {
+        "id": 8,
+        "name": "Table 8",
+        "capacity": 6,
+        "section": "Upper Hall",
+        "status": "available"
+      },
+      {
+        "id": 9,
+        "name": "Table 9",
+        "capacity": 8,
+        "section": "Upper Hall",
+        "status": "available"
+      },
+      {
+        "id": 10,
+        "name": "Table 10",
+        "capacity": 2,
+        "section": "Upper Hall",
+        "status": "available"
+      },
+      {
+        "id": 11,
+        "name": "Table 11",
+        "capacity": 4,
+        "section": "Upper Hall",
+        "status": "available"
+      },
+      {
+        "id": 12,
+        "name": "Table 12",
+        "capacity": 4,
+        "section": "Upper Hall",
+        "status": "available"
+      }
+    ],
+    "audit_log": [
+      {
+        "id": "audit-1791569483200-d13dabd8",
+        "action": "BILL_VOID",
+        "billId": "test-bill-1791569483168",
+        "billNumber": "INV-2026-TEST01",
+        "grandTotal": 756,
+        "grandTotalPaise": 75600,
+        "voidReason": "Customer changed table before dining",
+        "voidedAt": "2026-10-09T18:11:23.200Z",
+        "voidedByUserId": "usr-admin",
+        "voidedByUsername": "admin",
+        "voidedByName": "PRIMECENTURY RESTAURANT & CAFE"
+      },
+      {
+        "id": "audit-1791569441904-08c61cd8",
+        "action": "BILL_VOID",
+        "billId": "test-bill-1791569441884",
+        "billNumber": "INV-2026-TEST01",
+        "grandTotal": 756,
+        "grandTotalPaise": 75600,
+        "voidReason": "Customer changed table before dining",
+        "voidedAt": "2026-10-09T18:10:41.903Z",
+        "voidedByUserId": "usr-admin",
+        "voidedByUsername": "admin",
+        "voidedByName": "PRIMECENTURY RESTAURANT & CAFE"
+      },
+      {
+        "id": "audit-1791565457251-de20375f",
+        "action": "BILL_DELETION",
+        "billId": "bill-test-101",
+        "billNumber": "INV-2026-0099",
+        "grandTotal": 525,
+        "paymentMethod": "cash",
+        "tableId": 1,
+        "cashierName": "Amit Kumar",
+        "paidAt": "2026-10-09T17:04:17.238Z",
+        "deletedAt": "2026-10-09T17:04:17.252Z",
+        "deletedByUserId": "usr-admin",
+        "deletedByUsername": "admin",
+        "deletedByName": "PRIMECENTURY RESTAURANT & CAFE",
+        "itemsCount": 1,
+        "items": [
+          {
+            "name": "Paneer Tikka",
+            "price": 260,
+            "quantity": 2,
+            "isVeg": true
+          }
+        ]
+      }
+    ]
+  }
+}

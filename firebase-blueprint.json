@@ -1,0 +1,263 @@
+{
+  "entities": {
+    "Order": {
+      "title": "Order",
+      "description": "Restaurant customer order",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique order identifier"
+        },
+        "orderNumber": {
+          "type": "number",
+          "description": "Daily sequential order number"
+        },
+        "tableId": {
+          "type": "number",
+          "description": "Associated table number"
+        },
+        "status": {
+          "type": "string",
+          "description": "Order lifecycle state",
+          "enum": ["active", "paid", "cancelled"]
+        },
+        "waiterName": {
+          "type": "string",
+          "description": "Name of server taking order"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Order creation timestamp"
+        },
+        "restaurantId": {
+          "type": "string",
+          "description": "Restaurant identifier"
+        }
+      },
+      "required": ["id", "orderNumber", "tableId", "status", "createdAt"]
+    },
+    "KOT": {
+      "title": "KOT",
+      "description": "Kitchen Order Ticket",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique KOT identifier"
+        },
+        "kotNumber": {
+          "type": "number",
+          "description": "Sequential kitchen order number"
+        },
+        "orderId": {
+          "type": "string",
+          "description": "Parent order ID"
+        },
+        "tableId": {
+          "type": "number",
+          "description": "Table identifier"
+        },
+        "status": {
+          "type": "string",
+          "description": "Kitchen preparation status",
+          "enum": ["new", "preparing", "ready", "served"]
+        },
+        "waiterName": {
+          "type": "string",
+          "description": "Waiter who dispatched KOT"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Creation timestamp"
+        },
+        "restaurantId": {
+          "type": "string",
+          "description": "Restaurant identifier"
+        }
+      },
+      "required": ["id", "kotNumber", "orderId", "tableId", "status", "createdAt"]
+    },
+    "Bill": {
+      "title": "Bill",
+      "description": "Finalized sales invoice and tax receipt",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique bill identifier"
+        },
+        "billNumber": {
+          "type": "string",
+          "description": "Sequential fiscal bill number"
+        },
+        "orderId": {
+          "type": "string",
+          "description": "Associated order ID"
+        },
+        "tableId": {
+          "type": "number",
+          "description": "Table number"
+        },
+        "subtotal": {
+          "type": "number",
+          "description": "Bill subtotal in Rupees"
+        },
+        "grandTotal": {
+          "type": "number",
+          "description": "Grand total in Rupees"
+        },
+        "paymentMethod": {
+          "type": "string",
+          "description": "Payment instrument",
+          "enum": ["cash", "upi", "card", "split"]
+        },
+        "paymentStatus": {
+          "type": "string",
+          "description": "Payment status",
+          "enum": ["paid", "unpaid", "voided"]
+        },
+        "paidAt": {
+          "type": "string",
+          "description": "Settlement timestamp"
+        },
+        "cashierName": {
+          "type": "string",
+          "description": "Cashier who collected payment"
+        },
+        "restaurantId": {
+          "type": "string",
+          "description": "Restaurant identifier"
+        }
+      },
+      "required": ["id", "billNumber", "orderId", "tableId", "grandTotal", "paymentStatus", "paidAt"]
+    },
+    "Table": {
+      "title": "Table",
+      "description": "Dining table state and occupancy",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique table string identifier"
+        },
+        "name": {
+          "type": "string",
+          "description": "Display table name"
+        },
+        "capacity": {
+          "type": "number",
+          "description": "Seating capacity"
+        },
+        "section": {
+          "type": "string",
+          "description": "Floor or dining area"
+        },
+        "status": {
+          "type": "string",
+          "description": "Occupancy status",
+          "enum": ["available", "occupied", "billed"]
+        },
+        "restaurantId": {
+          "type": "string",
+          "description": "Restaurant identifier"
+        }
+      },
+      "required": ["id", "name", "status"]
+    },
+    "MenuItem": {
+      "title": "MenuItem",
+      "description": "Food or beverage catalog item",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique menu item identifier"
+        },
+        "name": {
+          "type": "string",
+          "description": "Item name"
+        },
+        "price": {
+          "type": "number",
+          "description": "Price in Rupees"
+        },
+        "category": {
+          "type": "string",
+          "description": "Menu category"
+        },
+        "subcategory": {
+          "type": "string",
+          "description": "Menu subcategory"
+        },
+        "isAvailable": {
+          "type": "boolean",
+          "description": "Stock availability"
+        },
+        "isVeg": {
+          "type": "boolean",
+          "description": "Vegetarian flag"
+        },
+        "restaurantId": {
+          "type": "string",
+          "description": "Restaurant identifier"
+        }
+      },
+      "required": ["id", "name", "price", "isAvailable"]
+    },
+    "RestaurantSettings": {
+      "title": "RestaurantSettings",
+      "description": "Store configuration and tax settings",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Settings doc identifier"
+        },
+        "name": {
+          "type": "string",
+          "description": "Restaurant name"
+        },
+        "cgstRate": {
+          "type": "number",
+          "description": "CGST tax rate percentage"
+        },
+        "sgstRate": {
+          "type": "number",
+          "description": "SGST tax rate percentage"
+        },
+        "restaurantId": {
+          "type": "string",
+          "description": "Restaurant identifier"
+        }
+      },
+      "required": ["id", "name", "cgstRate", "sgstRate"]
+    }
+  },
+  "firestore": {
+    "/orders/{orderId}": {
+      "schema": "Order",
+      "description": "Live and completed customer orders"
+    },
+    "/kots/{kotId}": {
+      "schema": "KOT",
+      "description": "Kitchen order tickets"
+    },
+    "/bills/{billId}": {
+      "schema": "Bill",
+      "description": "Historical and finalized fiscal sales receipts"
+    },
+    "/tables/{tableId}": {
+      "schema": "Table",
+      "description": "Dining table states and floor assignments"
+    },
+    "/menu_items/{menuItemId}": {
+      "schema": "MenuItem",
+      "description": "Restaurant menu items and pricing"
+    },
+    "/settings/{settingsId}": {
+      "schema": "RestaurantSettings",
+      "description": "Store and tax configuration"
+    }
+  }
+}

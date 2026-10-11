@@ -1,0 +1,130 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Default deny all unknown collections
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() > 0 && id.size() <= 128;
+    }
+
+    function isNumber(val) {
+      return val is int || val is float;
+    }
+
+    // Orders validation
+    function isValidOrder(data) {
+      return data.id is string &&
+             isNumber(data.orderNumber) && data.orderNumber >= 0 &&
+             isNumber(data.tableId) && data.tableId >= 0 &&
+             data.status in ['active', 'paid', 'cancelled'];
+    }
+
+    // KOTs validation
+    function isValidKOT(data) {
+      return data.id is string &&
+             isNumber(data.kotNumber) && data.kotNumber >= 0 &&
+             data.orderId is string &&
+             isNumber(data.tableId) && data.tableId >= 0 &&
+             data.status in ['new', 'preparing', 'ready', 'served'];
+    }
+
+    // Bills validation
+    function isValidBill(data) {
+      return data.id is string &&
+             data.billNumber is string &&
+             data.orderId is string &&
+             isNumber(data.tableId) && data.tableId >= 0 &&
+             isNumber(data.grandTotal) && data.grandTotal >= 0 &&
+             data.paymentStatus in ['paid', 'unpaid', 'voided'];
+    }
+
+    // Tables validation
+    function isValidTable(data) {
+      return data.name is string &&
+             data.status in ['available', 'occupied', 'billed'];
+    }
+
+    // Menu Items validation
+    function isValidMenuItem(data) {
+      return data.name is string &&
+             isNumber(data.price) && data.price >= 0 &&
+             data.isAvailable is bool;
+    }
+
+    // Settings validation
+    function isValidSetting(data) {
+      return data.name is string &&
+             isNumber(data.cgstRate) && data.cgstRate >= 0 &&
+             isNumber(data.sgstRate) && data.sgstRate >= 0;
+    }
+
+    // Connection test document
+    match /test/{testId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    // Orders Collection
+    match /orders/{orderId} {
+      allow read: if true;
+      allow create: if isValidId(orderId) && isValidOrder(incoming());
+      allow update: if isValidId(orderId) && isValidOrder(incoming());
+      allow delete: if isValidId(orderId);
+    }
+
+    // Kitchen Order Tickets (KOT) Collection
+    match /kots/{kotId} {
+      allow read: if true;
+      allow create: if isValidId(kotId) && isValidKOT(incoming());
+      allow update: if isValidId(kotId) && isValidKOT(incoming());
+      allow delete: if isValidId(kotId);
+    }
+
+    // Finalized Bills Collection (Protected accounting records: deletion prohibited directly from client)
+    match /bills/{billId} {
+      allow read: if true;
+      allow create: if isValidId(billId) && isValidBill(incoming());
+      allow update: if isValidId(billId) && isValidBill(incoming());
+      allow delete: if false;
+    }
+
+    // Tables Collection
+    match /tables/{tableId} {
+      allow read: if true;
+      allow create: if isValidId(tableId) && isValidTable(incoming());
+      allow update: if isValidId(tableId) && isValidTable(incoming());
+      allow delete: if isValidId(tableId);
+    }
+
+    // Menu Items Collection
+    match /menu_items/{menuItemId} {
+      allow read: if true;
+      allow create: if isValidId(menuItemId) && isValidMenuItem(incoming());
+      allow update: if isValidId(menuItemId) && isValidMenuItem(incoming());
+      allow delete: if isValidId(menuItemId);
+    }
+
+    // Restaurant Settings Collection
+    match /settings/{settingsId} {
+      allow read: if true;
+      allow create: if isValidId(settingsId) && isValidSetting(incoming());
+      allow update: if isValidId(settingsId) && isValidSetting(incoming());
+      allow delete: if false;
+    }
+
+    // Protected Audit Logs Collection (Immutable audit trail: cannot be edited or deleted)
+    match /audit_logs/{logId} {
+      allow read: if true;
+      allow create: if isValidId(logId);
+      allow update, delete: if false;
+    }
+  }
+}

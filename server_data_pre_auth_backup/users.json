@@ -1,0 +1,56 @@
+[
+  {
+    "id": "usr-admin",
+    "username": "admin",
+    "name": "PRIMECENTURY RESTAURANT & CAFE",
+    "passwordHash": "4475bf1634e724887b166b80a0a52103f49a1beb2975885844756513cb64db59",
+    "role": "owner",
+    "isActive": true,
+    "createdAt": "2026-10-07T00:00:00Z"
+  },
+  {
+    "id": "usr-2",
+    "username": "manager",
+    "name": "Pooja Verma",
+    "passwordHash": "c57b9c5fa6d814fe36b4e1fe372eebf37bf7ae402ea73a9ea15070d41a85022f",
+    "role": "manager",
+    "isActive": true,
+    "createdAt": "2026-10-07T00:00:00Z"
+  },
+  {
+    "id": "usr-3",
+    "username": "cashier",
+    "name": "Amit Kumar",
+    "passwordHash": "8dc6e7d174fc24cb7f744da65a4567a3de0803422b510b08235c5ad1f26fa98a",
+    "role": "cashier",
+    "isActive": true,
+    "createdAt": "2026-10-07T00:00:00Z"
+  },
+  {
+    "id": "usr-4",
+    "username": "waiter",
+    "name": "Rohan Gupta",
+    "passwordHash": "c3757dedc889c5644217a562e5b349b20c3bfbaf5bd3a8e3bb33ce61f5d0c02c",
+    "role": "waiter",
+    "isActive": true,
+    "createdAt": "2026-10-07T00:00:00Z"
+  },
+  {
+    "id": "usr-5",
+    "username": "kitchen",
+    "name": "Chef Sanjeev",
+    "passwordHash": "1e72005b66620eb1e22ecd5b2aea5e598cb14bc54416a8df9b6dc4d9ed4b221c",
+    "role": "kitchen",
+    "isActive": true,
+    "createdAt": "2026-10-07T00:00:00Z"
+  },
+  {
+    "id": "usr-1791570861005-8e193a",
+    "name": "Rahul Sharma",
+    "username": "rahul_waiter_1791570860999",
+    "passwordHash": "e111cc060d1bf38e159ff199e77196ea745bb2693434ad7025d2d6076a613e0c",
+    "role": "waiter",
+    "isActive": true,
+    "createdAt": "2026-10-09T18:34:21.005Z"
+  }
+]
